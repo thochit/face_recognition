@@ -29,9 +29,9 @@ if __name__ == '__main__':
         else:
             webcam_demo_faiss(args.load_clf, args.dataset_path, 0.5, args.faiss_path, args.names_path, args.detect_method)
     elif args.mode == 'folder_demo':
-        folder_demo(args.dataset_path, args.load_clf, args.classify_method, 0.5, args.svm_model, args.faiss_path, args.names_path, args.detect_method)
+        folder_demo(args.video_path, args.dataset_path, args.load_clf, args.classify_method, 0.5, args.svm_model, args.faiss_path, args.names_path, args.detect_method)
     elif args.mode == 'add_identity':
-        add_identity(args.dataset_path, args.name, svm_path_file=args.svm_model, detect_method=args.detect_method)
+        add_identity(args.dataset_path, args.name, args.detect_method, args.num_image)
     elif args.mode == 'create_database':
         if args.classify_method == 'svm':
             create_database_SVM(args.dataset_path, facenet, args.svm_model, args.detect_method)

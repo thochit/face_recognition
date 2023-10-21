@@ -1,0 +1,43 @@
+# requirements.txt
+
+# OpenCV for image processing
+opencv-python
+
+# NumPy for numerical operations
+numpy
+
+# Keras for deep learning models
+keras
+
+# faiss for similarity search
+faiss-cpu
+
+# Pillow for image processing
+Pillow
+
+# Unidecode for text normalization
+Unidecode
+
+# scikit-learn for machine learning utilities
+scikit-learn
+
+# joblib for saving/loading models
+joblib
+
+# torch for PyTorch deep learning framework
+torch
+
+# mediapipe for facial landmarks detection
+mediapipe
+
+# facenet-pytorch for face recognition
+facenet-pytorch
+
+# mtcnn for face detection
+mtcnn
+
+# facenet-pytorch for face recognition
+facenet-pytorch
+
+# gdown for downloading files from Google Drive
+gdown

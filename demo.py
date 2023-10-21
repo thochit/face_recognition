@@ -4,7 +4,7 @@ from utils_pytorch import *
 from recognize_face import *
 from facenet_pytorch import InceptionResnetV1
 
-def add_identity(folder_path: str, name: str, detect_method: str, num_image=5):
+def add_identity(folder_path: str, name: str, detect_method: str, num_image:int):
     '''
     Collect a specified number of images for a new identity using the webcam.
     Input:
@@ -289,7 +289,7 @@ def video_demo_faiss(video_path:str, facenet, index, names, threshold:float, det
     cap.release()
     cv.destroyAllWindows()
 
-def folder_demo(dataset_path, load_clf:bool, clf_method:str, threshold:float, svm_path_file:str, faiss_path:str, names_path:str, detect_method:str):
+def folder_demo(test_path:str, dataset_path:str, load_clf:bool, clf_method:str, threshold:float, svm_path_file:str, faiss_path:str, names_path:str, detect_method:str):
     '''
     Perform face recognition on videos in a folder using either SVM or Faiss for fast similarity search.
     Input:
@@ -318,7 +318,7 @@ def folder_demo(dataset_path, load_clf:bool, clf_method:str, threshold:float, sv
         with open(names_path, 'rb') as file:
                 names = pickle.load(file)
 
-    video_paths = list_videos(dataset_path)
+    video_paths = list_videos(test_path)
     for _ in video_paths:
         video_path = random.choice(video_paths)
         if clf_method == 'svm':
